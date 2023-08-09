@@ -16,11 +16,18 @@ func main() {
 	topic := "0x7ae1420774474a63c6da37d66e70351e80273a7f6a538d8c05d21d727571dded"
 	fromAddr := "0x58b529F9084D7eAA598EB3477Fe36064C5B7bbC1"
 	txHash := "0x78a175f07d49f3d57e35ec40eca2b7e160dc9cf04fa8103812ede1ca128e7149"
+	txHash2 := "0x44f32912b8e44652ff6ef8753378cf9635a82a27c6b175bd6426ac433aeb5176"
 	smtRoot := "0x0000000000000000000000000000000000000000000000000000000000000001"
 	vol := uint64(14)
+	vol2 := uint64(16)
 	rpc := "https://goerli.blockpi.network/v1/rpc/public"
 
 	assignment, _, err := util.GenerateReceiptSingleNumSumCircuitProofWitness(rpc, smtRoot, txHash, contractAddr, fromAddr, topic, vol)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	assignment2, _, err := util.GenerateReceiptSingleNumSumCircuitProofWitness(rpc, smtRoot, txHash2, contractAddr, fromAddr, topic, vol2)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -52,6 +59,13 @@ func main() {
 		return
 	}
 
+	witness2, err := frontend.NewWitness(assignment2, ecc.BN254.ScalarField())
+
+	if err != nil {
+		log.Errorf("Receipt failed to setup for: %s\n", err.Error())
+		return
+	}
+
 	// for bench
 	/*var wg sync.WaitGroup
 	log.Infoln("start prove")
@@ -71,9 +85,20 @@ func main() {
 	wg.Wait()*/
 
 	// for seq test
+	log.Infoln("start wintness 1")
 	for i := 0; i < 20; i++ {
 		log.Infof("bench num: %d", i)
 		_, err = groth16.Prove(ccs, pk, witness)
+		if err != nil {
+			log.Errorf("Receipt failed to prove for: %s\n", err.Error())
+			return
+		}
+	}
+
+	log.Infoln("start wintness 2")
+	for i := 0; i < 20; i++ {
+		log.Infof("bench num: %d", i)
+		_, err = groth16.Prove(ccs, pk, witness2)
 		if err != nil {
 			log.Errorf("Receipt failed to prove for: %s\n", err.Error())
 			return
