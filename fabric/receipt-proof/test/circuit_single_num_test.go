@@ -27,4 +27,14 @@ func TestReceiptSingleNumSumCircuit(t *testing.T) {
 
 	err = test.IsSolved(&core.SingleNumSumCircuit{}, witness, ecc.BN254.ScalarField())
 	assert.NoError(err)
+
+	txHash = "0x44f32912b8e44652ff6ef8753378cf9635a82a27c6b175bd6426ac433aeb5176"
+	vol = uint64(16)
+	witness, _, err = util.GenerateReceiptSingleNumSumCircuitProofWitness(rpc, smtRoot, txHash, contractAddr, fromAddr, topic, vol)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	err = test.IsSolved(&core.SingleNumSumCircuit{}, witness, ecc.BN254.ScalarField())
+	assert.NoError(err)
 }
