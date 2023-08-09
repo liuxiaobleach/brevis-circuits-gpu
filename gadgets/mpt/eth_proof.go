@@ -157,7 +157,7 @@ func CheckEthStorageProof(
 	)
 
 	var slotValueNibbles [64]frontend.Variable
-	isBig, isLiteral, prefixOrTotalHexLen, _, _ := rlp.RlpFieldPrefix(api, [2]frontend.Variable{valueRlp[0], valueRlp[1]})
+	isBig, isLiteral, prefixOrTotalHexLen, _, _, _ := rlp.RlpFieldPrefix(api, [2]frontend.Variable{valueRlp[0], valueRlp[1]})
 	//for i := 0; i < 64; i++ {
 	//	slotValue[i] = valueRlp[i+2]
 	//}
