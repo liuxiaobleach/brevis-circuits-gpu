@@ -32,14 +32,14 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	ccs, err := frontend.Compile(ecc.BN254.ScalarField(), r1cs.NewBuilder, &core.SingleNumSumCircuit{})
+	ccs, err := frontend.Compile(ecc.BLS12_377.ScalarField(), r1cs.NewBuilder, &core.SingleNumSumCircuit{})
 	if err != nil {
 		log.Errorf("Receipt failed to compile for: %s\n", err.Error())
 		return
 	}
 
 	log.Info("Start to setup pk")
-	var pk = groth16.NewProvingKey(ecc.BN254)
+	var pk = groth16.NewProvingKey(ecc.BLS12_377)
 	err = common.ReadProvingKey("test_single_number_circuit.pk", pk)
 	if err != nil {
 		log.Warnf("Failed to read pk %s, and try create", err.Error())
@@ -52,14 +52,14 @@ func main() {
 
 	log.Infoln("pk load done.")
 
-	witness, err := frontend.NewWitness(assignment, ecc.BN254.ScalarField())
+	witness, err := frontend.NewWitness(assignment, ecc.BLS12_377.ScalarField())
 
 	if err != nil {
 		log.Errorf("Receipt failed to setup for: %s\n", err.Error())
 		return
 	}
 
-	witness2, err := frontend.NewWitness(assignment2, ecc.BN254.ScalarField())
+	witness2, err := frontend.NewWitness(assignment2, ecc.BLS12_377.ScalarField())
 
 	if err != nil {
 		log.Errorf("Receipt failed to setup for: %s\n", err.Error())
