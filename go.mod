@@ -42,7 +42,6 @@ require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/holiman/uint256 v1.2.2-0.20230321075855-87b91420868c // indirect
 	github.com/ingonyama-zk/icicle v0.0.0-20230809142854-b51b424effe7 // indirect
-	github.com/ingonyama-zk/iciclegnark v0.0.0-20230806090248-830300d9edfe // indirect
 	github.com/klauspost/compress v1.15.15 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/kr/text v0.2.0 // indirect
@@ -78,7 +77,7 @@ require (
 replace (
 	github.com/binance-chain/go-sdk => github.com/binance-chain/go-sdk v1.2.2-0.20200520064040-fc067ad70353
 	github.com/bnb-chain/bsc-relayer => github.com/celer-network/bsc-relayer v0.0.0-20230220102218-3f971e7d50f4
-	github.com/consensys/gnark => github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230811023936-8e9dc99ccd6e
+	github.com/consensys/gnark => github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230719185033-49f6942d2236
 	github.com/consensys/gnark-crypto => github.com/celer-network/gnark-crypto v0.0.0-20230423085214-c00cabca6125
 	github.com/cosmos/cosmos-sdk => github.com/bnb-chain/bnc-cosmos-sdk v0.25.4-0.20221221115251-f9e69ff1b273
 	github.com/ethereum/go-ethereum v1.11.2 => github.com/ethereum/go-ethereum v1.10.18
