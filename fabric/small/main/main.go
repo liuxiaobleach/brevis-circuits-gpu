@@ -32,7 +32,7 @@ func main() {
 
 	assignment := &core.SmallProofCircuit{
 		In:  1,
-		Out: 2,
+		Out: 1,
 	}
 
 	witness, err := frontend.NewWitness(assignment, ecc.BN254.ScalarField())
