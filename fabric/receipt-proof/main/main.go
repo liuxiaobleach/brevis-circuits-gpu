@@ -7,8 +7,10 @@ import (
 	"github.com/celer-network/goutils/log"
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark/backend/groth16"
+	groth16_bn254 "github.com/consensys/gnark/backend/groth16/bn254"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/frontend/cs/r1cs"
+	"reflect"
 )
 
 func main() {
@@ -33,8 +35,9 @@ func main() {
 
 	log.Info("Start to setup pk")
 	var pk = groth16.NewProvingKey(ecc.BN254)
+	var diskPk = groth16.NewProvingKey(ecc.BN254)
 	var vk = groth16.NewVerifyingKey(ecc.BN254)
-	err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
+	err1 := common.ReadProvingKey("test_single_number_circuit.pk", diskPk)
 	err2 := common.ReadVerifyingKey("test_single_number_circuit.vk", vk)
 	if err1 != nil || err2 != nil {
 		log.Warnf("Failed to read pk and vk, and try create, %v, %v", err1, err2)
@@ -44,6 +47,13 @@ func main() {
 		}
 		common.WriteProvingKey(pk, "test_single_number_circuit.pk")
 		common.WriteVerifyingKey(vk, "test_single_number_circuit.vk")
+
+		// first time create pk vk. let's compare pk
+		err = common.ReadProvingKey("test_single_number_circuit.pk", diskPk)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		CompareBn254Pk(pk.(*groth16_bn254.ProvingKey), diskPk.(*groth16_bn254.ProvingKey))
 	}
 
 	log.Infoln("pk load done.")
@@ -76,7 +86,7 @@ func main() {
 	// for seq test
 	for i := 0; i < 20; i++ {
 		log.Infof("bench num: %d", i)
-		proof, err := groth16.Prove(ccs, pk, witness)
+		proof, err := groth16.Prove(ccs, diskPk, witness)
 		if err != nil {
 			log.Errorf("Receipt failed to prove for: %s\n", err.Error())
 			return
@@ -96,4 +106,33 @@ func main() {
 	}
 
 	log.Infoln("finish prove")
+}
+
+func CompareBn254Pk(pk, origPk *groth16_bn254.ProvingKey) {
+	log.Infof("pk == pk_from_disk G1 %v", reflect.DeepEqual(pk.G1, origPk.G1))
+	log.Infof("pk == pk_from_disk G1.A %v", reflect.DeepEqual(pk.G1.A, origPk.G1.A))
+	log.Infof("pk == pk_from_disk G1.B %v", reflect.DeepEqual(pk.G1.B, origPk.G1.B))
+	log.Infof("pk == pk_from_disk G1.Z %v", reflect.DeepEqual(pk.G1.Z, origPk.G1.Z))
+	log.Infof("pk == pk_from_disk G1.K %v", reflect.DeepEqual(pk.G1.K, origPk.G1.K))
+	log.Infof("pk == pk_from_disk G1.Alpha %v", reflect.DeepEqual(pk.G1.Alpha, origPk.G1.Alpha))
+	log.Infof("pk == pk_from_disk G1.Beta %v", reflect.DeepEqual(pk.G1.Beta, origPk.G1.Beta))
+	log.Infof("pk == pk_from_disk G1.Delta %v", reflect.DeepEqual(pk.G1.Delta, origPk.G1.Delta))
+
+	log.Infof("pk == pk_from_disk G1Device %v", reflect.DeepEqual(pk.G1Device, origPk.G1Device))
+
+	log.Infof("pk == pk_from_disk G2 %v", reflect.DeepEqual(pk.G2, origPk.G2))
+	log.Infof("pk == pk_from_disk G1Device %v", reflect.DeepEqual(pk.G2Device, origPk.G2Device))
+
+	log.Infof("pk == pk_from_disk Domain %v", reflect.DeepEqual(pk.Domain, origPk.Domain))
+	log.Infof("pk == pk_from_disk DomainDevice %v", reflect.DeepEqual(pk.DomainDevice, origPk.DomainDevice))
+	log.Infof("pk == pk_from_disk DenDevice %v", reflect.DeepEqual(pk.DenDevice, origPk.DenDevice))
+
+	log.Infof("pk == pk_from_disk InfinityA %v", reflect.DeepEqual(pk.InfinityA, origPk.InfinityA))
+	log.Infof("pk == pk_from_disk InfinityB %v", reflect.DeepEqual(pk.InfinityB, origPk.InfinityB))
+
+	log.Infof("pk == pk_from_disk NbInfinityA %v", reflect.DeepEqual(pk.NbInfinityA, origPk.NbInfinityA))
+	log.Infof("pk == pk_from_disk NbInfinityB %v", reflect.DeepEqual(pk.NbInfinityB, origPk.NbInfinityB))
+	log.Infof("pk == pk_from_disk CommitmentKey %v", reflect.DeepEqual(pk.CommitmentKey, origPk.CommitmentKey))
+
+	log.Infof("pk == pk_from_disk all %v", reflect.DeepEqual(pk, origPk))
 }
