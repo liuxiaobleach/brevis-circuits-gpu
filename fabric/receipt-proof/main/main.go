@@ -33,14 +33,17 @@ func main() {
 
 	log.Info("Start to setup pk")
 	var pk = groth16.NewProvingKey(ecc.BN254)
-	err = common.ReadProvingKey("test_single_number_circuit.pk", pk)
-	if err != nil {
+	var vk = groth16.NewVerifyingKey(ecc.BN254)
+	pk, err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
+	vk, err2 := common.ReadVerifyingKey("test_single_number_circuit.vk", vk)
+	if err1 != nil || err2 != nil {
 		log.Warnf("Failed to read pk %s, and try create", err.Error())
-		pk, _, err = groth16.Setup(ccs)
+		pk, vk, err = groth16.Setup(ccs)
 		if err != nil {
 			log.Fatalln(err)
 		}
 		common.WriteProvingKey(pk, "test_single_number_circuit.pk")
+		common.WriteVerifyingKey(vk, "test_single_number_circuit.vk")
 	}
 
 	log.Infoln("pk load done.")
@@ -73,9 +76,20 @@ func main() {
 	// for seq test
 	for i := 0; i < 20; i++ {
 		log.Infof("bench num: %d", i)
-		_, err = groth16.Prove(ccs, pk, witness)
+		proof, err := groth16.Prove(ccs, pk, witness)
 		if err != nil {
 			log.Errorf("Receipt failed to prove for: %s\n", err.Error())
+			return
+		}
+
+		pubWitness, err := witness.Public()
+		if err != nil {
+			log.Errorf("Receipt failed to get pub witness for: %s\n", err.Error())
+			return
+		}
+
+		err = groth16.Verify(proof, vk, pubWitness)
+		if err != nil {
 			return
 		}
 	}
