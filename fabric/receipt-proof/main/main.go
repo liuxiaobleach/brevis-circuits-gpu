@@ -34,8 +34,8 @@ func main() {
 	log.Info("Start to setup pk")
 	var pk = groth16.NewProvingKey(ecc.BN254)
 	var vk = groth16.NewVerifyingKey(ecc.BN254)
-	pk, err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
-	vk, err2 := common.ReadVerifyingKey("test_single_number_circuit.vk", vk)
+	err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
+	err2 := common.ReadVerifyingKey("test_single_number_circuit.vk", vk)
 	if err1 != nil || err2 != nil {
 		log.Warnf("Failed to read pk and vk, and try create, %v, %v", err1, err2)
 		pk, vk, err = groth16.Setup(ccs)
