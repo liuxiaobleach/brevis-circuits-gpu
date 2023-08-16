@@ -37,7 +37,7 @@ func main() {
 	pk, err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
 	vk, err2 := common.ReadVerifyingKey("test_single_number_circuit.vk", vk)
 	if err1 != nil || err2 != nil {
-		log.Warnf("Failed to read pk %s, and try create", err.Error())
+		log.Warnf("Failed to read pk and vk, and try create, %v, %v", err1, err2)
 		pk, vk, err = groth16.Setup(ccs)
 		if err != nil {
 			log.Fatalln(err)
