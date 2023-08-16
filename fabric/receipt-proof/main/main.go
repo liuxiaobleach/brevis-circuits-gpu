@@ -90,6 +90,7 @@ func main() {
 
 		err = groth16.Verify(proof, vk, pubWitness)
 		if err != nil {
+			log.Errorf("Receipt failed to get verify for: %s\n", err.Error())
 			return
 		}
 	}
