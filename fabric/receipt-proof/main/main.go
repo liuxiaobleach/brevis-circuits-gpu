@@ -121,7 +121,7 @@ func CompareBn254Pk(pk, origPk *groth16_bn254.ProvingKey) {
 	log.Infof("pk == pk_from_disk G1Device %v", reflect.DeepEqual(pk.G1Device, origPk.G1Device))
 
 	log.Infof("pk == pk_from_disk G2 %v", reflect.DeepEqual(pk.G2, origPk.G2))
-	log.Infof("pk == pk_from_disk G1Device %v", reflect.DeepEqual(pk.G2Device, origPk.G2Device))
+	log.Infof("pk == pk_from_disk G2Device %v", reflect.DeepEqual(pk.G2Device, origPk.G2Device))
 
 	log.Infof("pk == pk_from_disk Domain %v", reflect.DeepEqual(pk.Domain, origPk.Domain))
 	log.Infof("pk == pk_from_disk DomainDevice %v", reflect.DeepEqual(pk.DomainDevice, origPk.DomainDevice))
