@@ -586,8 +586,8 @@ github.com/leanovate/gopter v0.2.9/go.mod h1:U2L/78B+KVFIx2VmW6onHJQzXtFb+p5y3y2
 github.com/leodido/go-urn v1.2.1/go.mod h1:zt4jvISO2HfUBqxjfIshjdMTYS56ZS/qv49ictyFfxY=
 github.com/lib/pq v1.0.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/lib/pq v1.3.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
-github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230822071259-415725515a61 h1:hINCyOZQgOR17sy74UAW98rIJ3RX6Kudj1thQhNWTFo=
-github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230822071259-415725515a61/go.mod h1:8f/22JTYgZxtN1Tfi6W2kfD1aNo1IBBLUe4zuxanOlg=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230829075025-b96bb00cabad h1:LQri8zmcCXs9ECW7CpPhzlwmgEfPrHR9IcUrMJj/UqY=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230829075025-b96bb00cabad/go.mod h1:c/XFaYPbFN0rClJ3XmwlqAoFka/wvstX3sNjysKe7ao=
 github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0/go.mod h1:zJYVVT2jmtg6P3p1VtQj7WsuWi/y4VnjVBn7F8KPB3I=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/magiconair/properties v1.8.5/go.mod h1:y3VJvCyxH9uVvJTWEGAELF3aiYNyPKd5NZ3oSwXrF60=
