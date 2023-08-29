@@ -481,8 +481,8 @@ github.com/influxdata/tdigest v0.0.0-20181121200506-bf2b5ad3c0a9/go.mod h1:Js0mq
 github.com/influxdata/usage-client v0.0.0-20160829180054-6d3895376368/go.mod h1:Wbbw6tYNvwa5dlB6304Sd+82Z3f7PmVZHVKU637d4po=
 github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb h1:SeOyo/iukdLHdNmQ4sfirAlLchRkCj/zsxRLTgdoRJM=
 github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb/go.mod h1:+6y/4nTZxxFr51N0oUviv0CeCNMalNpMj1PhVjWGzsk=
-github.com/ingonyama-zk/icicle v0.0.0-20230727080545-2f21ec4aa7f4 h1:rnIps6yGHbrvYCeQMMOW8dPWJ6707et2r1Ud5Olvl+4=
-github.com/ingonyama-zk/icicle v0.0.0-20230727080545-2f21ec4aa7f4/go.mod h1:kPvbQqCrBszFYe7cqctnvXVMHzGihiQsIAr/qP3TbNo=
+github.com/ingonyama-zk/icicle v0.0.0-20230828071454-78e20f9add5f h1:AFX3OihWppy0koshuElHRFK1Bj7G2fP/CUO7Fh1LuCs=
+github.com/ingonyama-zk/icicle v0.0.0-20230828071454-78e20f9add5f/go.mod h1:9JiPcJeIAUoVYrgVgBO6tVy6ZXIaPXZtz/y2Mvg6jbk=
 github.com/ingonyama-zk/iciclegnark v0.0.0-20230817103837-e600ab198a16 h1:g9iHycHuqjAnkbetL/QfW0nv2e0PTP8d8kNz+xj0Svc=
 github.com/ingonyama-zk/iciclegnark v0.0.0-20230817103837-e600ab198a16/go.mod h1:2oOaaVYILmoG2tLETR0xrHqYhkko0QjuEFt95sJu42g=
 github.com/iris-contrib/blackfriday v2.0.0+incompatible/go.mod h1:UzZ2bDEoaSGPbkg6SAB4att1aAwTmVIx/5gCVqeyUdI=
@@ -586,8 +586,8 @@ github.com/leanovate/gopter v0.2.9/go.mod h1:U2L/78B+KVFIx2VmW6onHJQzXtFb+p5y3y2
 github.com/leodido/go-urn v1.2.1/go.mod h1:zt4jvISO2HfUBqxjfIshjdMTYS56ZS/qv49ictyFfxY=
 github.com/lib/pq v1.0.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/lib/pq v1.3.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
-github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230829064336-9dd621315eb1 h1:ToQc9yoDNzbwKsf0TNreJ8GEr9TSO6Mxl7ra+FOZ8QI=
-github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230829064336-9dd621315eb1/go.mod h1:8f/22JTYgZxtN1Tfi6W2kfD1aNo1IBBLUe4zuxanOlg=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230829065815-9bee39496825 h1:0I9E1JgTlhvjfvBV+I9LrIealiSck8CVSNHha2IXSWM=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230829065815-9bee39496825/go.mod h1:c/XFaYPbFN0rClJ3XmwlqAoFka/wvstX3sNjysKe7ao=
 github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0/go.mod h1:zJYVVT2jmtg6P3p1VtQj7WsuWi/y4VnjVBn7F8KPB3I=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/magiconair/properties v1.8.5/go.mod h1:y3VJvCyxH9uVvJTWEGAELF3aiYNyPKd5NZ3oSwXrF60=
