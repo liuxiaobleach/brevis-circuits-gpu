@@ -99,7 +99,7 @@ func main() {
 }
 
 func CompareBN254ProvingKey(one, two *groth162.ProvingKey) {
-	log.Infof("one.IsDifferent(two): %v", one.IsDifferent(two))
+	//log.Infof("one.IsDifferent(two): %v", one.IsDifferent(two))
 
 	log.Infof("deep.Equal(one.Domain, two.Domain): %v", deep.Equal(one.Domain, two.Domain))
 	log.Infof("deep.Equal(one.G1, two.G1): %v", deep.Equal(one.G1, two.G1))
@@ -108,13 +108,21 @@ func CompareBN254ProvingKey(one, two *groth162.ProvingKey) {
 	log.Infof("one.G1InfPointIndices: %+v", one.G1InfPointIndices)
 	log.Infof("two.G1InfPointIndices: %+v", two.G1InfPointIndices)
 
-	log.Infof("one.G1.K: %+v", one.G1.K)
-	log.Infof("two.G1.K: %+v", two.G1.K)
+	log.Infof("test one po in i: %d %+v", 1, one.G1.K[1])
+	log.Infof("test two po in i: %d %+v", 1, two.G1.K[1])
+
+	pointsNoInfinity := one.G1.K
+	for i, gnarkPoint := range pointsNoInfinity {
+		if gnarkPoint.IsInfinity() {
+			log.Infof("one have inf i: %d %+v", i, gnarkPoint)
+			log.Infof("two po in i: %d %+v", i, two.G1.K[i])
+		}
+	}
 
 	log.Infof("deep.Equal(one.G2, two.G2): %v", deep.Equal(one.G2, two.G2))
 	log.Infof("deep.Equal(one.InfinityA, two.InfinityA): %v", deep.Equal(one.InfinityA, two.InfinityA))
 	log.Infof("deep.Equal(one.InfinityB, two.InfinityB): %v", deep.Equal(one.InfinityB, two.InfinityB))
-	log.Infof("deep.Equal(one.G1, two.G1): %v", deep.Equal(one.NbInfinityA, two.NbInfinityA))
-	log.Infof("deep.Equal(one.G1, two.G1): %v", deep.Equal(one.NbInfinityB, two.NbInfinityB))
-	log.Infof("deep.Equal(one.G1, two.G1): %v", deep.Equal(one.CommitmentKey, two.CommitmentKey))
+	log.Infof("deep.Equal(one.NbInfinityA, two.NbInfinityA): %v", deep.Equal(one.NbInfinityA, two.NbInfinityA))
+	log.Infof("deep.Equal(one.NbInfinityB, two.NbInfinityB): %v", deep.Equal(one.NbInfinityB, two.NbInfinityB))
+	log.Infof("deep.Equal(one.CommitmentKey, two.CommitmentKey): %v", deep.Equal(one.CommitmentKey, two.CommitmentKey))
 }
