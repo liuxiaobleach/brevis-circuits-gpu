@@ -7,6 +7,7 @@ import (
 	"github.com/celer-network/goutils/log"
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark/backend/groth16"
+	groth162 "github.com/consensys/gnark/backend/groth16/bn254"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/frontend/cs/r1cs"
 )
@@ -44,16 +45,28 @@ func main() {
 		}
 		common.WriteProvingKey(pk, "test_single_number_circuit.pk")
 		common.WriteVerifyingKey(vk, "test_single_number_circuit.vk")
+
+		var pkFromDisk = groth16.NewProvingKey(ecc.BN254)
+		err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
+		if err1 != nil {
+			log.Fatalln(err1)
+		}
+
+		one := pk.(*groth162.ProvingKey)
+		two := pkFromDisk.(*groth162.ProvingKey)
+
+		CompareBN254ProvingKey(one, two)
+
 	}
 
 	log.Infoln("pk load done.")
 
-	witness, err := frontend.NewWitness(assignment, ecc.BN254.ScalarField())
+	/*witness, err := frontend.NewWitness(assignment, ecc.BN254.ScalarField())
 
 	if err != nil {
 		log.Errorf("Receipt failed to setup for: %s\n", err.Error())
 		return
-	}
+	}*/
 
 	// for bench
 	/*var wg sync.WaitGroup
@@ -74,7 +87,7 @@ func main() {
 	wg.Wait()*/
 
 	// for seq test
-	for i := 0; i < 20; i++ {
+	/*for i := 0; i < 20; i++ {
 		log.Infof("bench num: %d", i)
 		proof, err := groth16.Prove(ccs, pk, witness)
 		if err != nil {
@@ -93,7 +106,12 @@ func main() {
 			log.Errorf("Receipt failed to get verify for: %s\n", err.Error())
 			return
 		}
-	}
+	}*/
 
 	log.Infoln("finish prove")
+}
+
+func CompareBN254ProvingKey(one, two *groth162.ProvingKey) {
+	log.Infof("one.IsDifferent(two): %v", one.IsDifferent(two))
+
 }
