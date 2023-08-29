@@ -104,6 +104,10 @@ func CompareBN254ProvingKey(one, two *groth162.ProvingKey) {
 	log.Infof("deep.Equal(one.Domain, two.Domain): %v", deep.Equal(one.Domain, two.Domain))
 	log.Infof("deep.Equal(one.G1, two.G1): %v", deep.Equal(one.G1, two.G1))
 	log.Infof("deep.Equal(one.G1InfPointIndices, two.G1InfPointIndices): %v", deep.Equal(one.G1InfPointIndices, two.G1InfPointIndices))
+
+	log.Infof("one.G1InfPointIndices: %+v", one.G1InfPointIndices)
+	log.Infof("two.G1InfPointIndices: %+v", two.G1InfPointIndices)
+
 	log.Infof("deep.Equal(one.G2, two.G2): %v", deep.Equal(one.G2, two.G2))
 	log.Infof("deep.Equal(one.InfinityA, two.InfinityA): %v", deep.Equal(one.InfinityA, two.InfinityA))
 	log.Infof("deep.Equal(one.InfinityB, two.InfinityB): %v", deep.Equal(one.InfinityB, two.InfinityB))
