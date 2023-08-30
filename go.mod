@@ -8,7 +8,7 @@ require (
 	github.com/consensys/gnark-crypto v0.11.0
 	github.com/ethereum/go-ethereum v1.11.5
 	github.com/iden3/go-iden3-crypto v0.0.15
-	github.com/liyue201/gnark-circomlib v0.0.0-20221229085226-4cffd763e7ce
+	github.com/liyue201/gnark-circomlib v0.0.0-00010101000000-000000000000
 	github.com/rs/zerolog v1.29.0
 	golang.org/x/crypto v0.7.0
 )
