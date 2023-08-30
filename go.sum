@@ -482,8 +482,8 @@ github.com/ingonyama-zk/celer-gnark v0.0.0-20230822071259-415725515a61 h1:RyH7VW
 github.com/ingonyama-zk/celer-gnark v0.0.0-20230822071259-415725515a61/go.mod h1:8f/22JTYgZxtN1Tfi6W2kfD1aNo1IBBLUe4zuxanOlg=
 github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb h1:SeOyo/iukdLHdNmQ4sfirAlLchRkCj/zsxRLTgdoRJM=
 github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb/go.mod h1:+6y/4nTZxxFr51N0oUviv0CeCNMalNpMj1PhVjWGzsk=
-github.com/ingonyama-zk/icicle v0.0.0-20230727080545-2f21ec4aa7f4 h1:rnIps6yGHbrvYCeQMMOW8dPWJ6707et2r1Ud5Olvl+4=
-github.com/ingonyama-zk/icicle v0.0.0-20230727080545-2f21ec4aa7f4/go.mod h1:kPvbQqCrBszFYe7cqctnvXVMHzGihiQsIAr/qP3TbNo=
+github.com/ingonyama-zk/icicle v0.0.0-20230814101556-a1d9fa66485c h1:2vgiOSdtjwQZE9p+EixnUFISdZv/VWH3xpRxGpFSFnU=
+github.com/ingonyama-zk/icicle v0.0.0-20230814101556-a1d9fa66485c/go.mod h1:9JiPcJeIAUoVYrgVgBO6tVy6ZXIaPXZtz/y2Mvg6jbk=
 github.com/ingonyama-zk/iciclegnark v0.0.0-20230817103837-e600ab198a16 h1:g9iHycHuqjAnkbetL/QfW0nv2e0PTP8d8kNz+xj0Svc=
 github.com/ingonyama-zk/iciclegnark v0.0.0-20230817103837-e600ab198a16/go.mod h1:2oOaaVYILmoG2tLETR0xrHqYhkko0QjuEFt95sJu42g=
 github.com/iris-contrib/blackfriday v2.0.0+incompatible/go.mod h1:UzZ2bDEoaSGPbkg6SAB4att1aAwTmVIx/5gCVqeyUdI=
