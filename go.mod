@@ -41,7 +41,7 @@ require (
 	github.com/google/pprof v0.0.0-20230309165930-d61513b1440d // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/holiman/uint256 v1.2.2-0.20230321075855-87b91420868c // indirect
-	github.com/ingonyama-zk/icicle v0.0.0-20230824090243-27627ed2c150 // indirect
+	github.com/ingonyama-zk/icicle v0.0.0-20230820083528-b6c87c3fd82a // indirect
 	github.com/ingonyama-zk/iciclegnark v0.0.0-20230817103837-e600ab198a16 // indirect
 	github.com/klauspost/compress v1.15.15 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
