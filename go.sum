@@ -117,8 +117,6 @@ github.com/btcsuite/btcd/btcec/v2 v2.3.2/go.mod h1:zYzJ8etWJQIv1Ogk7OzpWjowwOdXY
 github.com/btcsuite/btcd/chaincfg/chainhash v1.0.1 h1:q0rUy8C/TYNBQS1+CGKw68tLOFYSNEs0TFnxxnS9+4U=
 github.com/btcsuite/btcd/chaincfg/chainhash v1.0.1/go.mod h1:7SFka0XMvUgj3hfZtydOrQY2mwhPclbT2snogU7SQQc=
 github.com/c-bata/go-prompt v0.2.2/go.mod h1:VzqtzE2ksDBcdln8G7mk2RX9QyGjH+OVqOCSiVIqS34=
-github.com/celer-network/gnark v0.0.0-20230901033447-1febe5adda79 h1:DnDOzS4/BAMB2tShmc67cXwACS/2huHVLRnHayzic0Q=
-github.com/celer-network/gnark v0.0.0-20230901033447-1febe5adda79/go.mod h1:VEpyJL2y65SsRQVDPQVUsP79S30TOd7moqS3QjFoMgU=
 github.com/celer-network/gnark-crypto v0.0.0-20230423085214-c00cabca6125 h1:3pKLZT/fq59IkDscxnelZLf4o/IQrvuIrKZHrEP5wlw=
 github.com/celer-network/gnark-crypto v0.0.0-20230423085214-c00cabca6125/go.mod h1:Iq/P3HHl0ElSjsg2E1gsMwhAyxnxoKK5nVyZKd+/KhU=
 github.com/celer-network/goutils v0.1.60 h1:/FfVaK4j1zzRXGUHlH0QGnBRDzxwYhOaUFnoZQphkAU=
@@ -484,8 +482,6 @@ github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb
 github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb/go.mod h1:+6y/4nTZxxFr51N0oUviv0CeCNMalNpMj1PhVjWGzsk=
 github.com/ingonyama-zk/icicle v0.0.0-20230831061944-5667f32bfedd h1:fiJnL33Sypr5P2O4apRzajR3/HVkTqpzGSijX0IfglA=
 github.com/ingonyama-zk/icicle v0.0.0-20230831061944-5667f32bfedd/go.mod h1:kAK8/EoN7fUEmakzgZIYdWy1a2rBnpCaZLqSHwZWxEk=
-github.com/ingonyama-zk/iciclegnark v0.0.0-20230817103837-e600ab198a16 h1:g9iHycHuqjAnkbetL/QfW0nv2e0PTP8d8kNz+xj0Svc=
-github.com/ingonyama-zk/iciclegnark v0.0.0-20230817103837-e600ab198a16/go.mod h1:2oOaaVYILmoG2tLETR0xrHqYhkko0QjuEFt95sJu42g=
 github.com/iris-contrib/blackfriday v2.0.0+incompatible/go.mod h1:UzZ2bDEoaSGPbkg6SAB4att1aAwTmVIx/5gCVqeyUdI=
 github.com/iris-contrib/go.uuid v2.0.0+incompatible/go.mod h1:iz2lgM/1UnEf1kP0L/+fafWORmlnuysV2EMP8MW+qe0=
 github.com/iris-contrib/httpexpect/v2 v2.3.1/go.mod h1:ICTf89VBKSD3KB0fsyyHviKF8G8hyepP0dOXJPWz3T0=
@@ -587,6 +583,10 @@ github.com/leanovate/gopter v0.2.9/go.mod h1:U2L/78B+KVFIx2VmW6onHJQzXtFb+p5y3y2
 github.com/leodido/go-urn v1.2.1/go.mod h1:zt4jvISO2HfUBqxjfIshjdMTYS56ZS/qv49ictyFfxY=
 github.com/lib/pq v1.0.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/lib/pq v1.3.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901061112-0298e66499c2 h1:2IGITsyNcgRRuysfUBrCH/auvzkElGxHozh4pmlgugs=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901061112-0298e66499c2/go.mod h1:ma51jnnO/YwClpmQKblQWu6DATNWD0RW3HXUiz0mXoc=
+github.com/liuxiaobleach/iciclegnark v0.0.0-20230901055628-0ff7b710d3d7 h1:+4cwWFzjXvukDTLjaWlpfbe1NKKhKLIbOeEXP+7X8nE=
+github.com/liuxiaobleach/iciclegnark v0.0.0-20230901055628-0ff7b710d3d7/go.mod h1:2oOaaVYILmoG2tLETR0xrHqYhkko0QjuEFt95sJu42g=
 github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0/go.mod h1:zJYVVT2jmtg6P3p1VtQj7WsuWi/y4VnjVBn7F8KPB3I=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/magiconair/properties v1.8.5/go.mod h1:y3VJvCyxH9uVvJTWEGAELF3aiYNyPKd5NZ3oSwXrF60=
