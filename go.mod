@@ -78,11 +78,11 @@ require (
 replace (
 	github.com/binance-chain/go-sdk => github.com/binance-chain/go-sdk v1.2.2-0.20200520064040-fc067ad70353
 	github.com/bnb-chain/bsc-relayer => github.com/celer-network/bsc-relayer v0.0.0-20230220102218-3f971e7d50f4
-	github.com/consensys/gnark => github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901061112-0298e66499c2
+	github.com/consensys/gnark => github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901070200-3e04c2c95ff7
 	github.com/consensys/gnark-crypto => github.com/celer-network/gnark-crypto v0.0.0-20230423085214-c00cabca6125
 	github.com/cosmos/cosmos-sdk => github.com/bnb-chain/bnc-cosmos-sdk v0.25.4-0.20221221115251-f9e69ff1b273
 	github.com/ethereum/go-ethereum v1.11.2 => github.com/ethereum/go-ethereum v1.10.18
-	github.com/ingonyama-zk/iciclegnark => github.com/liuxiaobleach/iciclegnark v0.0.0-20230901055628-0ff7b710d3d7
+	github.com/ingonyama-zk/iciclegnark => github.com/liuxiaobleach/iciclegnark v0.0.0-20230901070101-d3930fd13443
 	github.com/liyue201/gnark-circomlib => github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb
 	github.com/tendermint/go-amino => github.com/tendermint/go-amino v0.14.1
 	github.com/tendermint/iavl => github.com/bnb-chain/bnc-tendermint-iavl v0.12.0-binance.4

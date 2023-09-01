@@ -583,10 +583,10 @@ github.com/leanovate/gopter v0.2.9/go.mod h1:U2L/78B+KVFIx2VmW6onHJQzXtFb+p5y3y2
 github.com/leodido/go-urn v1.2.1/go.mod h1:zt4jvISO2HfUBqxjfIshjdMTYS56ZS/qv49ictyFfxY=
 github.com/lib/pq v1.0.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/lib/pq v1.3.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
-github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901061112-0298e66499c2 h1:2IGITsyNcgRRuysfUBrCH/auvzkElGxHozh4pmlgugs=
-github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901061112-0298e66499c2/go.mod h1:ma51jnnO/YwClpmQKblQWu6DATNWD0RW3HXUiz0mXoc=
-github.com/liuxiaobleach/iciclegnark v0.0.0-20230901055628-0ff7b710d3d7 h1:+4cwWFzjXvukDTLjaWlpfbe1NKKhKLIbOeEXP+7X8nE=
-github.com/liuxiaobleach/iciclegnark v0.0.0-20230901055628-0ff7b710d3d7/go.mod h1:2oOaaVYILmoG2tLETR0xrHqYhkko0QjuEFt95sJu42g=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901070200-3e04c2c95ff7 h1:AnNXwaG+6V8IpP1IPdl8Vlf5bxNPb6Hs6YH3eVe778A=
+github.com/liuxiaobleach/celer-gnark-icicle v0.0.0-20230901070200-3e04c2c95ff7/go.mod h1:CzRiTdSCQGVyYJj3b9Qox5VfGj83L20dQ+FR/yXYXeg=
+github.com/liuxiaobleach/iciclegnark v0.0.0-20230901070101-d3930fd13443 h1:FvofrNR7lrTpK8zJbUQV53gakpmRgDZClwuISsBqrRI=
+github.com/liuxiaobleach/iciclegnark v0.0.0-20230901070101-d3930fd13443/go.mod h1:2oOaaVYILmoG2tLETR0xrHqYhkko0QjuEFt95sJu42g=
 github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0/go.mod h1:zJYVVT2jmtg6P3p1VtQj7WsuWi/y4VnjVBn7F8KPB3I=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/magiconair/properties v1.8.5/go.mod h1:y3VJvCyxH9uVvJTWEGAELF3aiYNyPKd5NZ3oSwXrF60=
