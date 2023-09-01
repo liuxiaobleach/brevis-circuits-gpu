@@ -25,15 +25,18 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	ccs, err := frontend.Compile(ecc.BN254.ScalarField(), r1cs.NewBuilder, &core.SingleNumSumCircuit{})
+	//curve := ecc.BN254
+	curve := ecc.BLS12_377
+
+	ccs, err := frontend.Compile(curve.ScalarField(), r1cs.NewBuilder, &core.SingleNumSumCircuit{})
 	if err != nil {
 		log.Errorf("Receipt failed to compile for: %s\n", err.Error())
 		return
 	}
 
 	log.Info("Start to setup pk")
-	var pk = groth16.NewProvingKey(ecc.BN254)
-	var vk = groth16.NewVerifyingKey(ecc.BN254)
+	var pk = groth16.NewProvingKey(curve)
+	var vk = groth16.NewVerifyingKey(curve)
 	err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
 	err2 := common.ReadVerifyingKey("test_single_number_circuit.vk", vk)
 	if err1 != nil || err2 != nil {
@@ -48,7 +51,7 @@ func main() {
 
 	log.Infoln("pk load done.")
 
-	witness, err := frontend.NewWitness(assignment, ecc.BN254.ScalarField())
+	witness, err := frontend.NewWitness(assignment, curve.ScalarField())
 
 	if err != nil {
 		log.Errorf("Receipt failed to setup for: %s\n", err.Error())
