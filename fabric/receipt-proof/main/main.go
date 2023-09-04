@@ -20,20 +20,22 @@ func main() {
 	vol := uint64(14)
 	rpc := "https://goerli.blockpi.network/v1/rpc/public"
 
+	cirCurve := ecc.BLS12_377
+
 	assignment, _, err := util.GenerateReceiptSingleNumSumCircuitProofWitness(rpc, smtRoot, txHash, contractAddr, fromAddr, topic, vol)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	ccs, err := frontend.Compile(ecc.BN254.ScalarField(), r1cs.NewBuilder, &core.SingleNumSumCircuit{})
+	ccs, err := frontend.Compile(cirCurve.ScalarField(), r1cs.NewBuilder, &core.SingleNumSumCircuit{})
 	if err != nil {
 		log.Errorf("Receipt failed to compile for: %s\n", err.Error())
 		return
 	}
 
 	log.Info("Start to setup pk")
-	var pk = groth16.NewProvingKey(ecc.BN254)
-	var vk = groth16.NewVerifyingKey(ecc.BN254)
+	var pk = groth16.NewProvingKey(cirCurve)
+	var vk = groth16.NewVerifyingKey(cirCurve)
 	err1 := common.ReadProvingKey("test_single_number_circuit.pk", pk)
 	err2 := common.ReadVerifyingKey("test_single_number_circuit.vk", vk)
 	if err1 != nil || err2 != nil {
@@ -48,7 +50,7 @@ func main() {
 
 	log.Infoln("pk load done.")
 
-	witness, err := frontend.NewWitness(assignment, ecc.BN254.ScalarField())
+	witness, err := frontend.NewWitness(assignment, cirCurve.ScalarField())
 
 	if err != nil {
 		log.Errorf("Receipt failed to setup for: %s\n", err.Error())
