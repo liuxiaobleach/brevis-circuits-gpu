@@ -7,10 +7,8 @@ import (
 	"github.com/celer-network/goutils/log"
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark/backend/groth16"
-	groth16_bn254 "github.com/consensys/gnark/backend/groth16/bn254"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"reflect"
 )
 
 func main() {
@@ -53,7 +51,7 @@ func main() {
 		if err != nil {
 			log.Fatalln(err)
 		}
-		CompareBn254Pk(pk.(*groth16_bn254.ProvingKey), diskPk.(*groth16_bn254.ProvingKey))
+		//CompareBn254Pk(pk.(*groth16_bn254.ProvingKey), diskPk.(*groth16_bn254.ProvingKey))
 	}
 
 	log.Infoln("pk load done.")
@@ -108,7 +106,7 @@ func main() {
 	log.Infoln("finish prove")
 }
 
-func CompareBn254Pk(pk, origPk *groth16_bn254.ProvingKey) {
+/*func CompareBn254Pk(pk, origPk *groth16_bn254.ProvingKey) {
 	log.Infof("pk == pk_from_disk G1 %v", reflect.DeepEqual(pk.G1, origPk.G1))
 	log.Infof("pk == pk_from_disk G1.A %v", reflect.DeepEqual(pk.G1.A, origPk.G1.A))
 	log.Infof("pk == pk_from_disk G1.B %v", reflect.DeepEqual(pk.G1.B, origPk.G1.B))
@@ -135,4 +133,4 @@ func CompareBn254Pk(pk, origPk *groth16_bn254.ProvingKey) {
 	log.Infof("pk == pk_from_disk CommitmentKey %v", reflect.DeepEqual(pk.CommitmentKey, origPk.CommitmentKey))
 
 	log.Infof("pk == pk_from_disk all %v", reflect.DeepEqual(pk, origPk))
-}
+}*/
