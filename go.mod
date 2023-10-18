@@ -13,15 +13,7 @@ require (
 	golang.org/x/crypto v0.12.0
 )
 
-require (
-	github.com/Microsoft/go-winio v0.6.1 // indirect
-	github.com/crate-crypto/go-kzg-4844 v0.3.0 // indirect
-	github.com/ethereum/c-kzg-4844 v0.3.1 // indirect
-	github.com/supranational/blst v0.3.11 // indirect
-	golang.org/x/mod v0.11.0 // indirect
-	golang.org/x/sync v0.3.0 // indirect
-	golang.org/x/tools v0.9.1 // indirect
-)
+require golang.org/x/sync v0.3.0 // indirect
 
 require (
 	github.com/DataDog/zstd v1.5.2 // indirect
@@ -79,6 +71,7 @@ require (
 	golang.org/x/sys v0.11.0 // indirect
 	golang.org/x/text v0.12.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
+	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	rsc.io/tmplfunc v0.0.3 // indirect
 )
@@ -89,7 +82,8 @@ replace (
 	github.com/consensys/gnark => github.com/celer-network/gnark v0.0.0-20231018075305-0fef29931cc2
 	github.com/consensys/gnark-crypto => github.com/celer-network/gnark-crypto v0.0.0-20230423085214-c00cabca6125
 	github.com/cosmos/cosmos-sdk => github.com/bnb-chain/bnc-cosmos-sdk v0.25.4-0.20221221115251-f9e69ff1b273
-	github.com/ethereum/go-ethereum v1.11.2 => github.com/ethereum/go-ethereum v1.11.5
+
+	github.com/ethereum/go-ethereum => github.com/ethereum/go-ethereum v1.11.5
 
 	github.com/ingonyama-zk/icicle => github.com/celer-network/icicle v0.0.0-20231018015125-89a5081881af
 	github.com/liyue201/gnark-circomlib => github.com/celer-network/gnark-circomlib v0.0.0-20230315074501-e0c2cea42b8b
