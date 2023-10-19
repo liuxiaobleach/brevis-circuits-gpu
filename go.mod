@@ -79,7 +79,7 @@ require (
 replace (
 	github.com/binance-chain/go-sdk => github.com/binance-chain/go-sdk v1.2.2-0.20200520064040-fc067ad70353
 	github.com/bnb-chain/bsc-relayer => github.com/celer-network/bsc-relayer v0.0.0-20230220102218-3f971e7d50f4
-	github.com/consensys/gnark => github.com/celer-network/gnark v0.0.0-20231018125922-aee385ebd718
+	github.com/consensys/gnark => github.com/celer-network/gnark v0.0.0-20231019061813-c1574acca6f5
 	github.com/consensys/gnark-crypto => github.com/celer-network/gnark-crypto v0.0.0-20230423085214-c00cabca6125
 	github.com/cosmos/cosmos-sdk => github.com/bnb-chain/bnc-cosmos-sdk v0.25.4-0.20221221115251-f9e69ff1b273
 
