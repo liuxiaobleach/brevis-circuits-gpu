@@ -86,7 +86,7 @@ replace (
 	github.com/consensys/gnark => github.com/celer-network/gnark v0.0.0-20231024043832-c2a54d49141e
 	github.com/consensys/gnark-crypto => github.com/celer-network/gnark-crypto v0.0.0-20230423085214-c00cabca6125
 	github.com/cosmos/cosmos-sdk => github.com/bnb-chain/bnc-cosmos-sdk v0.25.4-0.20221221115251-f9e69ff1b273
-	github.com/ethereum/go-ethereum v1.11.2 => github.com/ethereum/go-ethereum v1.10.18
+	github.com/ethereum/go-ethereum => github.com/ethereum/go-ethereum v1.11.5
 	github.com/ingonyama-zk/icicle => github.com/celer-network/icicle v0.0.0-20231023084156-99522ab1b5d7
 	github.com/liyue201/gnark-circomlib => github.com/ingonyama-zk/celer-gnark-circomlib v0.0.0-20230719192407-bd9cd118fadb
 	github.com/tendermint/go-amino => github.com/tendermint/go-amino v0.14.1
