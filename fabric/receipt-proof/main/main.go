@@ -25,7 +25,8 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	targetCurve := ecc.BLS12_377
+	//targetCurve := ecc.BW6_761
+	targetCurve := ecc.BN254
 
 	ccs, err := frontend.Compile(targetCurve.ScalarField(), r1cs.NewBuilder, &core.SingleNumSumCircuit{})
 	if err != nil {
